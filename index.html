@@ -1,47 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Ideal Body Weight Calculator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Ideal Body Weight Calculator</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container">
-        <h1>Ideal Body Weight</h1>
+<div class="top-bar">
+<h2>Ideal Body Weight Calculator</h2>
 
-        <div class="input-group">
-            <label for="height">Height (in cm)</label>
-            <input type="number" id="height" placeholder="Enter your height">
-        </div>
+<button class="dark-btn" onclick="toggleDarkMode()">
+🌙 Dark Mode
+</button>
+</div>
 
-        <div class="input-group">
-            <label for="gender">Select Gender</label>
-            <select id="gender">
-                <option value="">-- Select Gender --</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-        </div>
+<div class="container">
 
-        <button onclick="calculateIBW()">Calculate</button>
+<div class="input-group">
+<label>Height (cm)</label>
+<input type="number" id="height" placeholder="Enter height">
+</div>
 
-        <div class="result" id="result"></div>
+<div class="input-group">
+<label>Current Weight (kg)</label>
+<input type="number" id="weight" placeholder="Enter weight">
+</div>
 
-        <div class="footer">
-            Based on standard IBW formula
-        </div>
-    </div>
+<div class="input-group">
+<label>Gender</label>
+<select id="gender">
+<option value="">Select Gender</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+</select>
+</div>
 
-    <!-- External JS -->
-    <script src="script.js"></script>
+<button class="calculate-btn" onclick="calculateIBW()">Calculate</button>
+
+<div id="result" class="result"></div>
+
+<div id="tips" class="tips"></div>
+
+<div class="history-box">
+<h3>Previous Results</h3>
+<ul id="history"></ul>
+</div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
-                                                </html>
+</html>
